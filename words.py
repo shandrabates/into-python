@@ -6,6 +6,7 @@ Task #1: Count the number of words in the document
 '''
 
 from urllib.request import urlopen
+from functions import even_or_odd
 
 file = "http://icarus.cs.weber.edu/~hvalle/hafb/words.txt"
 
@@ -41,3 +42,6 @@ with urlopen(file) as story:
 # Sort by key values
 for key in sorted(data.keys()):
     print(key, data[key])
+
+
+even_or_odd(count)
