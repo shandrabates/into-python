@@ -48,10 +48,8 @@ def word_organize():
                 else:
                     data[list] =1
                 count += 1
-
-
-# print("Total data", data)
-# Sort by key values
+    print("Total data", data)
+    # Sort by key values
     for key in sorted(data.keys()):
         print(key, data[key])
 
