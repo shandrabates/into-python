@@ -17,6 +17,8 @@ if "eggs":
 h = 42
 if h>50:
     print('Greater than 50')
+    if h>100:
+        print('Greater than 100')
 elif h<50:  #Else If
     print('Less than 50')
 else:
