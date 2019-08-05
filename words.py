@@ -37,5 +37,7 @@ with urlopen(file) as story:
             count += 1
 
 
-print("Total data", data)
-
+# print("Total data", data)
+# Sort by key values
+for key in sorted(data.keys()):
+    print(key, data[key])
