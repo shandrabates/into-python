@@ -1,57 +1,36 @@
-'''
+"""
 We will use this files to figure out how to define and later call up functions
 Learn about functions/definitions
 Use the keyword: def <name>():
 
-'''
+"""
 
 from urllib.request import urlopen
 
 
-def word_count():
+def fetch_words(file):
     """  A function that takes a text file and performs a word count
     :param file: a text file
     :return: number of words
     """
-    n = 0
-    file = "http://icarus.cs.weber.edu/~hvalle/hafb/words.txt"
+    count = 0
+    data = []       #empty list
     with urlopen(file) as story:
         for line in story:
             words = line.decode('utf-8').split() #must decode into strings and then separate with spaces
             #print(lists)
             for word in words:
-             n += 1
+                data.append(word)
+    return(data)
 
-    print("total number of words", n)
-
-
-
-def word_organize():
+def print_words(story_words):
     """
-    A function that takes in a text file and organizes/lists the resulting words with counts as a dictionary
-    :param file: a text file
-    :return: a dictionary of words organized
+    Print elements of the list
+    :param story_words:
+    :return: nothing
     """
-
-    count = 0
-    data ={}
-    with urlopen(file) as story:
-        for line in story:
-            lists = line.decode('utf-8').split() #must decode into strings and then separate with spaces
-            # print lists
-            #print(lists)
-            for list in lists:
-                #check to see if key is already in the dictionary (data)
-                if list in data:
-                    data[list] +=1
-                #if not, assign a new key
-                else:
-                    data[list] =1
-                count += 1
-    print("Total data", data)
-    # Sort by key values
-    for key in sorted(data.keys()):
-        print(key, data[key])
+    for word in story_words:
+        print(word)
 
 
 def main():
@@ -59,7 +38,9 @@ def main():
     Test function
     :return: nothing
     """
-    word_count()
+    file = "http://icarus.cs.weber.edu/~hvalle/hafb/words.txt"
+    words = fetch_words(file)
+    print_words(words)
 
 if __name__ == "__main__":
     main()
