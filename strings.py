@@ -24,4 +24,25 @@ print(s4)
 
 s5 = "A\\in a string"
 print(s5)
+s6 = 'this is "wow"'
+print(s6)
+
+# Raw strings
+raw_string = r'C:\User\Documents\Books'
+print(raw_string)
+
+# String as sequence
+s = 'parrot'
+# index notation 0, 1, 2, 3, 4, 5
+print('s[4]', s[4], type(s))
+# capitalize the string
+print(s, s.capitalize())
+
+
+
+
+
+
+
+
 
