@@ -22,10 +22,10 @@ def main():
     Test function
     :return: nothing
     """
-#Call function
-print(__name__)
-even_or_odd(89)
-even_or_odd(72)
+    #Call function
+    print(__name__)
+    even_or_odd(89)
+    even_or_odd(72)
 
 if __name__ == "__main__":
     main()
