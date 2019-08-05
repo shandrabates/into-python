@@ -8,3 +8,20 @@ while counter !=0:
     print(counter)
     # Augmented Operators
     counter -= 1
+
+counter = 5
+while counter: # use counter as an integer
+    print(counter)
+    # Augmented Operators
+    counter -= 1
+
+# Run forever
+while True:
+    print("Enter a number")
+    response = input()  #take user input
+    if int(response) % 7 ==0:     #number divisible by 7
+        break                     #exit loop
+
+
+
+print('Outside while loop')
