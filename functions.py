@@ -17,8 +17,16 @@ def even_or_odd(number):
     else:
         print('odd')
 
-
+def main():
+    """
+    Test function
+    :return: nothing
+    """
 #Call function
 print(__name__)
 even_or_odd(89)
 even_or_odd(72)
+
+if __name__ == "__main__":
+    main()
+    exit(0)
