@@ -14,7 +14,7 @@ n = 0
 with urlopen(file) as story:
     for line in story:
         lists = line.decode('utf-8').split() #must decode into strings and then separate with spaces
-        print(lists)
+        #print(lists)
         for list in lists:
             n += 1
 
@@ -26,7 +26,7 @@ with urlopen(file) as story:
     for line in story:
         lists = line.decode('utf-8').split() #must decode into strings and then separate with spaces
         # print lists
-        print(lists)
+        #print(lists)
         for list in lists:
             #check to see if key is already in the dictionary (data)
             if list in data:
@@ -37,10 +37,5 @@ with urlopen(file) as story:
             count += 1
 
 
-print("total number of words", n)
 print("Total data", data)
 
-#Count the amount of words in the file
-
-#n = 1
-#for words in words
