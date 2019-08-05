@@ -8,7 +8,7 @@ Use the keyword: def <name>():
 from urllib.request import urlopen
 
 
-def fetch_words(file):
+def fetch_items(file):
     """  A function that takes a text file and performs a word count
     :param file: a text file
     :return: number of words
@@ -17,20 +17,20 @@ def fetch_words(file):
     data = []       #empty list
     with urlopen(file) as story:
         for line in story:
-            words = line.decode('utf-8').split() #must decode into strings and then separate with spaces
+            items = line.decode('utf-8').split() #must decode into strings and then separate with spaces
             #print(lists)
-            for word in words:
-                data.append(word)
+            for item in items:
+                data.append(item)
     return(data)
 
-def print_words(story_words):
+def print_items(story_words):
     """
     Print elements of the list
     :param story_words:
     :return: nothing
     """
     for word in story_words:
-        print(word)
+        print(item)
 
 
 def main():
@@ -39,8 +39,8 @@ def main():
     :return: nothing
     """
     file = "http://icarus.cs.weber.edu/~hvalle/hafb/words.txt"
-    words = fetch_words(file)
-    print_words(words)
+    words = fetch_items(file)
+    print_items(items)
 
 if __name__ == "__main__":
     main()
