@@ -31,6 +31,10 @@ def main():
     # string formatting using format()
     print("The age of {0} is {1}".format("Mario", 34))
     print("The age of {0} is {1}, and the birthday of {0} is {2}".format("Mario", 34, "August 6th"))
+    # Omitting the index
+    print("The best nubmers are {} and {}".format(4, 22))
+    # By field name
+    print("Current position {latitude} {longitude}".format(latitude="60 N", longitude="5 E"))
 
 if __name__ == '__main__':
     main()
