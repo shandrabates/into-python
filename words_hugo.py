@@ -1,6 +1,7 @@
 """"
 Get a file from the web:
 http://icarus.cs.weber.edu/~hvalle/hafb/words.txt
+
 Task 1: Count number of words in document
 """
 from urllib.request import urlopen
@@ -34,6 +35,10 @@ def print_items(items):
 
 
 def main():
+    """
+    Test function for words library
+    :return: nothing
+    """
     file = "http://icarus.cs.weber.edu/~hvalle/hafb/words.txt"
     words = fetch_words(file)
     print_items(words)
