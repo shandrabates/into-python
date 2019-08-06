@@ -18,9 +18,15 @@ def main():
     :return: nothing
     """
     video_address = "https://www.youtube.com/watch?v=_tcW-j7KFgY"
-    webbrowser.open(video_address)
-    end = time.time()
-    print(end - start)
+    counter = 0
+    while counter <3:
+        # Delay/sleep for a few seconds"
+        time.sleep(60*60)   # 1 hour
+        webbrowser.open(video_address)
+        counter += 1
+        end = time.time()
+        print(end - start)
+
 
 
 if __name__ == '__main__':
