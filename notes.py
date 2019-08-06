@@ -16,4 +16,9 @@ To test for membership
 'in' and 'not in'
 
 
+You can comment out sections in Python using CTRL + /
+
+
+
+
 """

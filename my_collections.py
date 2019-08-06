@@ -19,7 +19,7 @@ def do_tuples():
     # single tuples
     t1 = (6,)      # adding the comma changes from an integer to a tuple (as integer is preferred)
     print(t1, type(t1))
-    #another way to create tuples
+    # another way to create tuples
     # Parenthesis are optional
     t2 = 1, 2, 3, 5
     print(t2, type(t2))
