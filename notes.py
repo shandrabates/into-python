@@ -19,6 +19,10 @@ To test for membership
 You can comment out sections in Python using CTRL + /
 
 
-
+How python looks for variables - Order of Operations
+L-local
+E-enclosing
+G-global
+B-built-in
 
 """

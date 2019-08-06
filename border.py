@@ -1,11 +1,7 @@
 """
 Python
 
-How python looks for variables
-L-local
-E-enclosing
-G-global
-B-built-in
+
 
 """
 
