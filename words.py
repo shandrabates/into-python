@@ -12,7 +12,7 @@ file = "http://icarus.cs.weber.edu/~hvalle/hafb/words.txt"
 
 n = 0
 
-with urlopen(file) as story:
+with urlopen(filename) as story:
     for line in story:
         lists = line.decode('utf-8').split() #must decode into strings and then separate with spaces
         #print(lists)

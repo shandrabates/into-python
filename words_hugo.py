@@ -11,9 +11,8 @@ def fetch_words(filename):
     """
     Count words in url file
     :param filename: url to file
-    :return: nothing
+    :return: a list with the items
     """
-    count = 0
     data = []       # empty list
     with urlopen(filename) as story:
         for line in story:
