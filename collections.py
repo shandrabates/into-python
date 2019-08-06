@@ -23,7 +23,11 @@ def do_tuples():
     # Parenthesis are optional
     t2 = 1, 2, 3, 5
     print(t2, type(t2))
-
+    # tuple constructor: tuple()
+    t_from_l = tuple([3, 77, 11])
+    print(t_from_l, type(t_from_l))
+    print(5 in (3, 6, 8, 5, 12))
+    print(5 not in (3, 6, 8, 5, 12))
 
 def min_max(items):
     """
@@ -34,21 +38,43 @@ def min_max(items):
     return min(items), max(items)
 
 
+def swap(a, b):
+    """
+    Create a function that will swap values
+    :param a:
+    :param b:
+    :return:
+    """
+    return b, a
+
 
 def main():
     """
     test function
     :return: nothing
     """
-    # do_tuples()
+    do_tuples()
 
-    output = min_max([56, 79, 11, 12, 90])
-    print("min", output[0])
-    print("max", output[1])
-    # tuple unpacking  => this turns these back into integers
-    lower, upper = min_max([56, 79, 11, 12, 90])
-    print("min", lower)
-    print("max", upper)
+    # output = min_max([56, 79, 11, 12, 90])
+    # print("min", output[0])
+    # print("max", output[1])
+    # # tuple unpacking  => this turns these back into integers
+    # lower, upper = min_max([56, 79, 11, 12, 90])
+    # print("min", lower)
+    # print("max", upper)
+    # # Set up swap function
+    # a = "jelly"
+    # b = "bean"
+    # print(a, b)
+    # # call the swap function
+    # a, b = swap(a, b)
+    # print(a, b)
+    # a, b = b, a
+    # print(a, b)
+
+
+
+
 
 
 
