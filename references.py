@@ -16,7 +16,7 @@ def modify(k):
 
 def replace(g):
     """
-    Replace input list
+    Replace input list, but creates a local copy (does nothing)
     :param g: input list
     :return: nothing
     """
@@ -24,6 +24,16 @@ def replace(g):
     print("g = ", g)
 
 
+def replace_content(g):
+    """
+    Replace the content inside the input list
+    :param g: input list
+    :return: nothing
+    """
+    g[0] = 88
+    g[1] = 22
+    g[2] = 44
+    print("g = ", g)
 
 
 def main():
@@ -37,6 +47,8 @@ def main():
     print("After modify() m = ", m)
     replace(m)
     print("After replace() m = ", m)
+    replace_content(m)
+    print("After replace_content() m = ", m)
 
 
 if __name__ == '__main__':
