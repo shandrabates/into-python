@@ -13,14 +13,13 @@ def fetch_words(filename):
     :param file: a text file
     :return: number of words
     """
-    count = 0
     data = []       #empty list
     with urlopen(filename) as story:
         for line in story:
-            items = line.decode('utf-8').split() #must decode into strings and then separate with spaces
+            words = line.decode('utf-8').split() #must decode into strings and then separate with spaces
             #print(lists)
-            for item in items:
-                data.append(item)
+            for word in words:
+                data.append(word)
     return(data)
 
 def print_items(items):
