@@ -19,6 +19,7 @@ list - delimited/defined by [] and accessed by [] index
 range - do operations at a group level - defined by []
 
 set - do operations at a group level - defined by {}
+        can do difference, symmetric difference, and issubset
 
 
 
