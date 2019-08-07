@@ -2,6 +2,7 @@
 Random class notes
 
 
+
 Collections:
 
 tuple - hererogeneous immutable sequence
@@ -15,11 +16,9 @@ list - delimited/defined by [] and accessed by [] index
 
 
 
-range
+range - do operations at a group level - defined by []
 
-
-
-set - do operations at a group level
+set - do operations at a group level - defined by {}
 
 
 
