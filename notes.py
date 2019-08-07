@@ -13,7 +13,13 @@ str -  defined by " "   and accessed by [] index
 
 list - delimited/defined by [] and accessed by [] index
 
+
+
 range
+
+
+
+set - do operations at a group level
 
 
 
