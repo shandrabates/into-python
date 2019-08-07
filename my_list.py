@@ -50,7 +50,34 @@ def main():
     print("a[0]:", a[0])
     print("b[0]:", b[0])
     print("a[0] is b[0]:", a[0] is b[0])
+    print("a[1] is b[1]:", a[1] is b[1])
+    # Modify a[1]
+    a[1].append(5)
+    print("a[1]:", a[1])
+    print("b[1]:", b[1])
+    print("a[1] is b[1]:", a[1] is b[1])
+    print("a:", a)
+    print("b:", b)
+    # Repetition
+    c = [21, 37]
+    d = c * 4
+    print("c", c)
+    print("d", d)
+    # All point to the same object
+    s = [[-1, 1]] * 5
+    print("s:", s)
+    s[1].append(7)
+    print("s:", s)
+    # index()
+    w = "the quick brown fox jumps over the lazy dog".split()
+    i = w.index('fox')
+    print("the index of 'fox' entry is:", i, w[i])
+    # If no index is found it will produce a ValueError
+    # j = w.index('cat')
+    # print("j is equal to", j)
 
+    # Membership testing with: count()
+    print("'the' value is ", w.count('the'))
 
 
 
