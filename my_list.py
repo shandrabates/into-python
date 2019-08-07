@@ -36,7 +36,21 @@ def main():
     # Shallow copies
     # A list of lists
     a = [[1, 2], [3,4]]
-    print(a)
+    print(a, type(a))
+    print("a[0][1]:", a[0][1])
+    # Copy the list of lists
+    b = a[:]
+    print("b is a:", b is a)
+    print("a[0]:", a[0])
+    print("b[0]:", b[0])
+    print("a[0] is b[0]:", a[0] is b[0])
+    # Now lets change one element
+    a[0] = [8, 9]
+    print("Change a[0] to [8,9]")
+    print("a[0]:", a[0])
+    print("b[0]:", b[0])
+    print("a[0] is b[0]:", a[0] is b[0])
+
 
 
 
