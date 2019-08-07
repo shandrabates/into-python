@@ -78,7 +78,25 @@ def main():
 
     # Membership testing with: count()
     print("'the' value is ", w.count('the'))
-
+    # Also test membership with: in, not in
+    print(37 in [12, 22, 37, 99])
+    print(37 not in [12, 22, 37, 99])
+    # Removing elements from list: index and del
+    w = "the quick brown fox jumps over the lazy dog".split()
+    print(len(w), w)
+    del w[3]       # delete using index
+    print(len(w), w)
+    # remove using: remove()
+    w.remove('over')
+    print(len(w), w)
+    # same as
+    del w[w.index('dog')]
+    print(len(w), w)
+    # Rearranging the list of elements
+    g = [1, 11, 21, 1211, 112111]
+    print(g)
+    g.reverse()     # permanent change in order
+    print("reverse g", g)
 
 
 
