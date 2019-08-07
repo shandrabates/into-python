@@ -29,6 +29,19 @@ def main():
     s = [0, 2, 3, 4, 6]
     for i in range(len(s)):
         print(s[i])
+    # Better way
+    for v in s:
+        print(v)
+
+    # enumerate(): returns an iterable series
+    t = [6, 789, 123, 98, 3, 22]
+    for p in enumerate(t):
+        print(p)
+
+    # Unpack the tuple using the enumerate
+    for i,v in enumerate(t):
+        print("i = {}, v = {}".format(i,v))
+
 
 
 
