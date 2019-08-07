@@ -97,6 +97,22 @@ def main():
     print(g)
     g.reverse()     # permanent change in order
     print("reverse g", g)
+    g.reverse()     # permanent change in order
+    print("reverse again ", g)
+
+    # Sort method accepts two arguments, key and reverse
+    d = [21, 33, 11, 77, 88, 33, 101, 1]
+    print("d:       ", d)
+    d.sort()
+    print("sorted d:", d)
+    d = [21, 33, 11, 77, 88, 33, 101, 1]
+    d.sort(reverse=True)
+    print("sort.reverse d:", d)
+    # sort by key
+    w = "the quick brown fox jumps over the lazy dog".split()
+    print("w", w)
+    w.sort(key=len)
+    print("w", w)
 
 
 
