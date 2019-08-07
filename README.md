@@ -8,3 +8,15 @@ This is an introduction to Python.
 - Basics of iterations (**if**, **else**, **while**)
 - Basics of functions (**def**)
 - The concept of modularity
+
+## Day 2 Summary
+- Learned about opening Youtube videos (webbrowser module)
+- Learned about time module
+- Learned about definitions:
+    - Required parameters
+    - Optional parameters
+- Tuples and unpacking tuples
+- Learned about more ways to alter strings
+
+## Day 3 Summary
+    
