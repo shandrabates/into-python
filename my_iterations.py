@@ -10,6 +10,9 @@ from list_comps import is_prime
 
 from statistics import mean
 
+from itertools import chain
+
+
 def main():
     """
     test function
@@ -35,11 +38,15 @@ def main():
     print(all(name == name.title for name in names))
     # Another built-in: zip()
     sunday = [2, 2, 5, 7, 9, 10, 9, 6, 4, 4]
-    monday = [12, 14, 14, 15, 15, 16, 15, 13, 10, 9]
+    monday = [12, 14, 14, 15, 15, 16, 15, 13, 10, 9, 8, 8]   # if you add extra values, it will ignore the extra data
     tuesday = [13, 14, 15, 15, 16, 17, 16, 16, 12, 12]
+    # wednesday = [12, 12]  # if you have incomplete data, it will limit calculations on all data
     # Calculate the minimum, maximum, and average of all points
+    # See the formatting stuff below to know how to format the print
     for temps in zip(sunday, monday, tuesday):
-        print('maximum =', max(temps), 'average =', mean(temps), 'minimum =', min(temps))
+        print('maximum ={:5.1f}, average ={:4.1f}, minimum ={:6.1f}'.format(max(temps), mean(temps), min(temps)))
+
+    # Chain
 
 
 

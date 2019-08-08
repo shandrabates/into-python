@@ -32,6 +32,9 @@ This methodology is only looking at one element at a time and storing only one e
 I.E. this is way way less memory and less computation taxation
 
 
+You can see how to format the size of your results in my_iterations
+Ex: print('maximum ={:5.1f}, average ={:4.1f}, minimum ={:6.1f}'.format(max(temps), mean(temps), min(temps)))
+
 
 To test for membership
 'in' and 'not in'
