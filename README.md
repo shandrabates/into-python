@@ -19,4 +19,15 @@ This is an introduction to Python.
 - Learned about more ways to alter strings
 
 ## Day 3 Summary
+- Completed our discussion on collections
+    - List
+    - Dictionaries
+    - Strings
+    - Tuples
+    - Range
+    - Set
+- Basics of exceptions: **try, except, throw**
+- Comprehensions
+
+## Day 4 Summary
     
