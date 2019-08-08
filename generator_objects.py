@@ -2,6 +2,8 @@
 Generator Objects are a cross between comprehensions and generator functions
 Syntax: Similar to list comprehension:
     (expr(item) for item in iterable)                but use () not []
+
+A lot of built-ins can be used on any collection: sum(), min(), max(), sort()
 """
 
 from list_comps import is_prime
