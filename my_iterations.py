@@ -8,6 +8,8 @@ from itertools import islice, count
 
 from list_comps import is_prime
 
+from statistics import mean
+
 def main():
     """
     test function
@@ -16,7 +18,7 @@ def main():
     ten_thousand_primes = islice((x for x in count() if is_prime(x)), 10000)
     print(ten_thousand_primes, type(ten_thousand_primes))
     # This is useful to do the operation quickly, depending on how many operations you want to do
-    print('List of first 10k prime numbers:', list(ten_thousand_primes))
+    # print('List of first 10k prime numbers:', list(ten_thousand_primes))
     # Note: If you need to use the object again, you need to re-generate it
     ten_thousand_primes = islice((x for x in count() if is_prime(x)), 10000)
     print('Sum of first 100k prime numbers:', sum(ten_thousand_primes))
@@ -28,6 +30,18 @@ def main():
     # Another method
     print(any(is_prime(x) for x in range(1328, 1362)))
     print(list(x for x in range(1328, 1362) if is_prime(x)))
+    # Check to see if all names in an iterable are in title form: First letter capitalized
+    names = ['London', 'New York', 'OgDen']
+    print(all(name == name.title for name in names))
+    # Another built-in: zip()
+    sunday = [2, 2, 5, 7, 9, 10, 9, 6, 4, 4]
+    monday = [12, 14, 14, 15, 15, 16, 15, 13, 10, 9]
+    tuesday = [13, 14, 15, 15, 16, 17, 16, 16, 12, 12]
+    # Calculate the minimum, maximum, and average of all points
+    for temps in zip(sunday, monday, tuesday):
+        print('maximum =', max(temps), 'average =', mean(temps), 'minimum =', min(temps))
+
+
 
 
 if __name__ == '__main__':
