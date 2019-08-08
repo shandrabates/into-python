@@ -30,4 +30,4 @@ This is an introduction to Python.
 - Comprehensions
 
 ## Day 4 Summary
-    
+- Learn about generator functions    
