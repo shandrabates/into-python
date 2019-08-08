@@ -53,7 +53,9 @@ def main():
     #
     # console_card_printer("Jane Doe", "10B", "DL345", "Boeing 737")
 
-    # pass just as a parameter
+    # pass a function as just an input parameter
+    # to prevent the function from being executed you must exclude the command to start the function
+    # Hence (console_card_printer) vs (console_card_printer())
     flight_1.make_boarding_class(console_card_printer)
 
     #
