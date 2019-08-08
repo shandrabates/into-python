@@ -16,7 +16,7 @@ def is_prime(num):
     :return: True for prime numbers or False for none-prime numbers
     """
     if num < 2:
-        return True
+        return False
     for i in range(2, int(sqrt(num))+ 1):
         if num % i == 0:
             return False
