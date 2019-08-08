@@ -8,7 +8,7 @@ class Flight:
     A flight with a particular passenger aircraft
     """
     # define our initializer (in other languages this is a constructor)
-    def __init__(self, number):
+    def __init__(self, number, aircraft):
         # if variable begins with one underscore its a private variable
         # this is a common convention for Python
         # Implementation details begin with "_"
@@ -22,6 +22,40 @@ class Flight:
         if not number[:2].isupper():
             raise ValueError('Airline Code must be capitalized {}'.format(number))
         self._number = number
+        # Add aicraft as another parameter
+        self._aircraft = aircraft
+        rows, seats = self._aircraft.seat_plan()
+        self._seating = [None] + \
+                        [{letter: None for letter in seats} for _ in rows]
+
+
+    def allocate_seat(self, seat, passenger):
+        """
+        Allocate a seat for the passenger
+        :param seat: seat designator (such as '12C', '21F'
+        :param passenger: Passenger name (such as 'Jane Doe')
+        :return:
+        """
+        rows, seat_letter = self._aircraft.seat_plan()
+        letter = seat[-1]      # take the letter from the seat
+        if letter not in seat_letter:
+            raise ValueError('Invalid seat letter {}'.format(letter))
+        row_text = seat[:-1]
+        try:
+            row = int(row_text)
+        except ValueError:
+            raise ValueError('Invalid row {}'.format(row_text))
+        if row not in rows:
+            raise ValueError('Invalid row number {}'.format(row))
+        if self._seating[row][letter] is not None:
+            raise ValueError('Seat {} already occupied '.format(seat))
+        #Assign the seat
+        self._seating[row][letter] = passenger
+
+
+
+        pass
+
 
     def airline(self):
         """
@@ -64,7 +98,12 @@ class Aircraft:
     def model(self):
         return self._model
 
-
+    def seat_plan(self):
+        """
+        Create tuple for the seat_plan that contains seats: A, B, C, D, E, F, G, H, J, K
+        :return: A tuple of the row number with the seat (row, seats)
+        """
+        return(range(1, self._num_rows +1), 'ABCDEFGHJK'[:self._num_seats_row])
 
 
 
