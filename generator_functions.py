@@ -19,6 +19,7 @@ def gen123():
     yield 2
     yield 3
 
+
 def gen246():
     print("About to yield 2")
     yield 2
@@ -41,6 +42,20 @@ def main():
     # Iterate over the generator function
     for v in gen123():
         print(v)
+
+    # Can use a for loop to go through the next generator
+    h = gen246()
+    for i in h:
+        print(i)
+
+    # Or we can just print this
+    a = gen246()
+    print(next(a))
+    print(next(a))
+    print(next(a))
+    # print(next(a)) last call with create an error
+
+
 
 
 
