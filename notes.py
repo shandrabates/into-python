@@ -34,6 +34,7 @@ I.E. this is way way less memory and less computation taxation
 
 You can see how to format the size of your results in my_iterations
 Ex: print('maximum ={:5.1f}, average ={:4.1f}, minimum ={:6.1f}'.format(max(temps), mean(temps), min(temps)))
+{:6.1f} => six chars width, 1 decimal precision, floating point
 
 
 To test for membership
