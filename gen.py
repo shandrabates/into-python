@@ -50,6 +50,11 @@ def run_distinct():
         print(item)
 
 
+def run_pipeline():
+    items = [3, 6, 6, 2, 1, 1]
+    for item in take(3, distinct(items)):
+        print(item)
+
 
 def main():
     """
@@ -57,7 +62,8 @@ def main():
     :return: nothing
     """
     #run_take()
-    run_distinct()
+    #run_distinct()
+    run_pipeline()
 
 
 if __name__ == '__main__':

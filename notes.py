@@ -22,7 +22,7 @@ set - do operations at a group level - defined by {}
         can do difference, symmetric difference, and issubset
 
 
-This is broken
+**Suggest using Visual Studio Code for an editor**
 
 
 
