@@ -67,7 +67,11 @@ class Flight:
         return sum(sum(1 for s in row.values() if s is None) for row in self._seating if row is not None)
 
     def make_boarding_class(self, card_printer):
-
+        """
+        make boarding passes for all the passengers on the flight
+        :param card_printer: pass in the console_card_printer function
+        :return: boarding passes for the passengers that have seats
+        """
         for passenger, seat in sorted(self._passenger_seats()):
             card_printer(passenger, seat, self.number(), self._aircraft.model())
 
