@@ -19,7 +19,26 @@ def make_flight():
     return flight
 
 
-
+def console_card_printer(passenger, seat, flight_number, aircraft):
+    """
+    Create a boarding pass containing flight information
+    :param passenger:
+    :param seat:
+    :param flight_number:
+    :param aircraft:
+    :return:
+    """
+    output = "| Name: {0}  "   \
+             " Flight: {1}  "   \
+             " Seat: {2}  "    \
+             " Aircraft: {3}"  \
+             " |".format(passenger, flight_number, seat, aircraft)
+    banner = "+" + "-" * (len(output) - 2) + "+"
+    border = "|" + " " * (len(output) - 2) + "|"
+    lines = [banner, border, output, border, banner]
+    card = '\n'.join(lines)
+    print(card)
+    print()
 
 
 def main():
@@ -31,6 +50,12 @@ def main():
     pp(flight_1._seating)
 
     print("Available Seats", flight_1.num_available_seats())
+    #
+    # console_card_printer("Jane Doe", "10B", "DL345", "Boeing 737")
+
+    # pass just as a parameter
+    flight_1.make_boarding_class(console_card_printer)
+
     #
     # f1.allocate_seat("2A", "Jane Doe")
     # pp(f1._seating)
