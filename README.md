@@ -30,4 +30,17 @@ This is an introduction to Python.
 - Comprehensions
 
 ## Day 4 Summary
-- Learn about generator functions    
+- Learned about generator functions
+- Learned about the itertools module for iterations and generators
+    - islice
+    - count
+    - chain
+    - including use of common operators:
+        - all
+        - any
+        - None
+        - min
+        - max
+- Learned how to create classes
+    - Correct class notations
+    - The concept of "private" vs "public" variable    

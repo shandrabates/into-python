@@ -7,20 +7,36 @@ from airtravel import Flight, Aircraft
 
 from pprint import pprint as pp
 
+def make_flight():
+    """
+    Generate a dummy flight for us
+    :return: Dummy flight information
+    """
+    flight = Flight("SN066", Aircraft("G-EUP", "CRJ", num_rows=20, num_seats_row=4))
+    flight.allocate_seat("2A", "Jane Doe")
+    flight.allocate_seat("4D", "John Smith")
+    flight.allocate_seat("20C", "Larry Wall")
+    return flight
+
+
+
+
 
 def main():
     """
     test function
     :return: nothing
     """
-    f1 = Flight("SN066", Aircraft("G-EUP", "CRJ", num_rows=20, num_seats_row=4))
-    pp(f1._seating)
+    flight_1 = make_flight()
+    pp(flight_1._seating)
 
-    f1.allocate_seat("2A", "Jane Doe")
-    pp(f1._seating)
-
-    f1.allocate_seat("4D", "John Smith")
-    pp(f1._seating)
+    print("Available Seats", flight_1.num_available_seats())
+    #
+    # f1.allocate_seat("2A", "Jane Doe")
+    # pp(f1._seating)
+    #
+    # f1.allocate_seat("4D", "John Smith")
+    # pp(f1._seating)
 
     # f1.allocate_seat("22A", "Leila Smith")  check to see that the different types of errors work
     # pp(f1._seating)

@@ -56,6 +56,15 @@ class Flight:
 
         pass
 
+    def num_available_seats(self):
+        """
+        Create a function to find out how many seats are remaining
+        :return: nummeric number
+        """
+        # count = 0
+        # if self._seating is == None
+        #     count =+1
+        return sum(sum(1 for s in row.values() if s is None) for row in self._seating if row is not None)
 
     def airline(self):
         """
