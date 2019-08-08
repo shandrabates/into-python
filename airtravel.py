@@ -53,10 +53,7 @@ class Aircraft:
     Create a class that defines an aircraft
     """
     def __init__(self, registration, model, num_rows, num_seats_row):
-        # Create a test for registration and model
-
         self._registration = registration
-
         self._model = model
         self._num_rows = num_rows
         self._num_seats_row = num_seats_row
