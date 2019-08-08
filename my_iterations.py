@@ -4,13 +4,12 @@ Look at the documentation for the itertools module
 
 """
 
-from itertools import islice, count
+from itertools import islice, count, chain
 
 from list_comps import is_prime
 
 from statistics import mean
 
-from itertools import chain
 
 
 def main():
@@ -46,8 +45,10 @@ def main():
     for temps in zip(sunday, monday, tuesday):
         print('maximum ={:5.1f}, average ={:4.1f}, minimum ={:6.1f}'.format(max(temps), mean(temps), min(temps)))
 
-    # Chain
-
+    # Chain from itertools
+    all_temps = chain(sunday, monday, tuesday)
+    print('All temps > 0', all(t > 0 for t in all_temps))
+    print(all_temps, type(all_temps))
 
 
 
